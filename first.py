@@ -721,3 +721,72 @@ print("\n")
 print("Left justification", text.ljust(60, "*"))
 print("Right justification", text.rjust(60, "*"))
 print("Center justification", text.center(60, "*"))
+
+
+
+# ==================================================================
+# Python Control Flow Statements and Loops
+'''
+Control Flow Statements
+The flow control statements are divided into three categories
+
+Conditional statements
+Iterative statements.
+Transfer statements
+
+'''
+# ------------------------------------
+# If statement in Python
+number = 6
+if number > 5:
+    # Calculate square
+    print(number * number)
+print('Next lines of code')
+
+# ------------------------------------
+# If – else statement
+password = input('Enter password ')
+
+if password == "PYnative@#29":
+    print("Correct password")
+else:
+    print("Incorrect Password")
+    
+# -----------------------------------
+# Chain multiple if statement in Python
+def user_check(choice):
+    if choice == 1:
+        print("Admin")
+    elif choice == 2:
+        print("Editor")
+    elif choice == 3:
+        print("Guest")
+    else:
+        print("Wrong entry")
+
+user_check(1)
+user_check(2)
+user_check(3)
+user_check(4)
+
+
+# -------------------------------------
+# Nested if-else statement
+num1 = int(input('Enter first number '))
+num2 = int(input('Enter second number '))
+
+if num1 >= num2:
+    if num1 == num2:
+        print(num1, 'and', num2, 'are equal')
+    else:
+        print(num1, 'is greater than', num2)
+else:
+    print(num1, 'is smaller than', num2)
+    
+    
+# ---------------------------------------
+# Single statement suites
+
+number = 56
+if number > 0: print("positive") 
+else: print("negative")
