@@ -41,7 +41,7 @@ while i<size:
 # Break Nested Loop in Python
 for i  in range(1,11):
     print("multipication table of",i)
-    for j in range(1,11):
+    for j in range(1,11):   
         if i>5 and j>5:
             break
         print(i*j,end=' ')
@@ -52,7 +52,7 @@ for i  in range(1,11):
 
 # Continue Statement in Python
 for i in range(1,11):
-    if(i==5):
+    if(i==5):       
         continue
     print(i)
     
@@ -162,7 +162,7 @@ else:
     print("Do nothing")
     
 # -------------------------------
-# Not in operator
+#  in operator
 my_list = [11, 15, 21, 29, 50, 70]
 number = 15
 if number in my_list:
@@ -173,14 +173,14 @@ else:
 # Not in operator
 my_tuple = (11, 15, 21, 29, 50, 70)
 number = 35
-if number not in my_tuple:
+if number not in my_tuple:  
     print("number is not present")
 else:
     print("number is present")
     
 # -----------------------------------   
 # is operator
-x = 10
+x = 10          
 y = 11 
 z = 10
 print(x is y)
@@ -353,7 +353,7 @@ print("Integer number:", num)
 # Output  3
 print(type(num))
 
-# --------------------------------------------------------------------
+# --------------------------------------------------------------------  
 # Casting Boolean value to an integer
 
 flag_true = True
@@ -622,3 +622,102 @@ print(s1)
 print(s2)
 # Output 'False'
 print(type(s1))
+
+# ===========================================================
+# Python Input: Take Input from User
+# Python Example to Accept Input From a User
+
+
+name = input("Enter Employee Name: ")
+salary = input("Enter salary: ")
+company = input("Enter Company name: ")
+
+# Display all values on screen
+print("\n")
+print("Printing Employee Details")
+print("Name", "Salary", "Company")
+print(name, salary, company)
+
+
+# ----------------------------------------
+# Take an Integer Number as input from User
+first_number = int(input("Enter first number "))
+second_number = int(input("Enter second number "))
+
+print("\n")
+print("First Number:", first_number)
+print("Second Number:", second_number)
+sum1 = first_number + second_number
+print("Addition of two number is: ", sum1)
+
+# -----------------------------------------
+# Take Float Number as a Input from User
+marks = float(input("Enter marks "))
+print("\n")
+print("Student marks is: ", marks)
+print("type is:", type(marks))
+
+
+# ---------------------------------------
+# Get Multiple inputs From a User in One Line
+name, age, marks = input("Enter your Name, Age, Percentage separated by space ").split()
+print("\n")
+print("User Details: ", name, age, marks)
+
+
+# ---------------------------------------
+# Accept Multiline input From a User
+data = []
+print("Tell me about yourself")
+while True:
+    line = input()
+    if line:
+        data.append(line)
+    else:
+        break
+finalText = '\n'.join(data)
+print("\n")
+print("Final text input")
+print(finalText)
+
+
+# --------------------------------------
+# Python Input() vs raw_input()
+# name = raw_input("Enter your name ")
+# print ("Student Name is: ", name)
+# print (type(name))
+
+# age = raw_input("Enter your age ")
+# print ("Student age is: ", age)
+# print (type(age))
+
+
+# ------------------------------------------
+# Display Output Number in Various Format
+number = int(input("Enter number "))
+
+print("\n")
+# 'd' is for integer number formatting
+print("The number is:{:d}".format(number))
+
+# 'o' is for octal number formatting, binary and hexadecimal format
+print('Output number in octal format : {0:o}'.format(number))
+
+# 'b' is for binary number formatting
+print('Output number in binary format: {0:b}'.format(number))
+
+# 'x' is for hexadecimal format
+print('Output number in hexadecimal format: {0:x}'.format(number))
+
+# 'X' is for hexadecimal format
+print('Output number in HEXADECIMAL: {0:X}'.format(number))
+
+
+# ----------------------------------------------
+# Output String Alignment
+text = input("Enter String ")
+
+print("\n")
+print("Left justification", text.ljust(60, "*"))
+print("Right justification", text.rjust(60, "*"))
+print("Center justification", text.center(60, "*"))
