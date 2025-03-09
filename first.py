@@ -790,3 +790,303 @@ else:
 number = 56
 if number > 0: print("positive") 
 else: print("negative")
+
+
+# =====================================================
+# What is for loop in Python
+# for loop with range()
+
+sum = 0
+for i in range(2, 22, 2):
+    sum = sum + i
+print(sum)
+
+# ---------------------------------------
+# How for loop works
+numbers = [1, 2, 3, 4, 5]
+# iterate over each element in list num
+for i in numbers:
+    # ** exponent operator
+    square = i ** 2
+    print("Square of:", i, "is:", square)
+    
+# ----------------------------------------
+# If-else in for loop
+for i in range(1, 11):
+    if i % 2 == 0:
+        print('Even Number:', i)
+    else:
+        print('Odd Number:', i)
+        
+  
+        
+# -------------------------------------------
+# Continue Statement in for loop
+name = "mariya mennen"
+count = 0
+for char in name:
+    if char != 'm':
+        continue
+    else:
+        count = count + 1
+
+print('Total number of m is:', count)
+
+
+# --------------------------------------------
+# Reverse for loop
+list1 = [10, 20, 30, 40]
+for num in reversed(list1):
+    print(num)
+    
+# -------------------------------------------
+# Nested for loops
+rows = 5
+# outer loop
+for i in range(1, rows + 1):
+    # inner loop
+    for j in range(1, i + 1):
+        print("*", end=" ")
+    print('')
+    
+    
+    
+# -----------------------------------------
+# While loop inside for loop
+for i in range(1, 6):
+    print('Multiplication table of:', i)
+    count = 1
+    # inner loop to print multiplication table of current number
+    while count < 11:
+        print(i * count, end=' ')
+        count = count + 1
+    print('\n')
+    
+    
+# -------------------------------------------
+# for loop in one line
+odd = [1, 5, 7, 9]
+even = [i + 1 for i in odd if i % 2 == 1]
+print(even)
+
+
+
+# ------------------------------------------
+# Accessing the index in for loop
+numbers = [4, 2, 5, 7, 8]
+for i, v in enumerate(numbers):
+    print('Numbers[', i, '] =', v)
+    
+
+numbers = [1, 2, 4, 6, 8]
+size = len(numbers)
+for i in range(size):
+    print('Index:', i, " ", 'Value:', numbers[i])
+    
+
+# -------------------------------------------
+# Iterate String using for loop
+
+name = "Jessa watson"
+for char in name[2:7:1]:
+    print(char, end=' ')
+    
+dialogue = "Remember, Red, hope is a good thing, maybe the best of things, and no good thing ever dies"
+# split on whitespace
+for word in dialogue.split():
+    print(word)
+    
+    
+    
+# --------------------------------------------
+# list comprehension
+numbers = [1, 2, 3, 7, 8]
+# list comprehension
+[print(i) for i in numbers]
+
+
+# -------------------------------------------
+# Iterate Dictionary using for loop
+dict1 = {"Brand": "BMW", "Color": "Black", "Date": 1964}
+for key in dict1:
+    print(key)
+    
+    
+# --------------------------------------------
+# Using negative step
+for i in range(5, -1, -1):
+    print(i)
+
+
+# ====================================================================
+# range() Examples
+# range(start, stop)
+# Numbers from 10 to 15
+# start = 10
+# stop = 16
+for i in range(10, 16):
+    print(i, end=' ')
+    
+# ------------------------------------------
+# range(start, stop, step)
+# Numbers from 10 to 15
+# start = 10
+# stop = 50
+# step = 5
+for i in range(10, 50, 5):
+    print(i, end=' ')
+    
+# ----------------------------------------------
+# Iterate a list using range() and for loop
+list1 = ['Jessa', 'Emma', 20, 30, 75.5]
+# iterate a list using range()
+for i in range(len(list1)):
+    print(list1[i])
+    
+    
+# ------------------------------------------------
+# Using negative step
+# reverse range using negative step
+# start = 5
+# stop = -1
+# step = -1
+for i in range(5, -1, -1):
+    print(i)
+    
+    
+# ---------------------------------------------------
+# Using reversed() function
+for i in reversed(range(10, 21)):
+    print(i, end=' ')
+# Output 19 18 17 16 15 14 13 12 11 10
+
+
+# ---------------------------------------------------
+# Decrementing range() using step
+# Decrement range() using step
+# start = 30, stop = 20
+# step = -2
+for i in range(30, 20, -2):
+    print(i, end=' ')
+# Output 30 28 26 24 22
+
+
+# ------------------------------------------------------
+# range() indexing and slicing
+range1 = range(0, 10)
+
+# first number (start number) in range
+print(range1[0])
+
+
+# access 5th number in range
+print(range1[5])
+# Output 5
+
+# access last number
+print(range1[range1.stop - 1])
+# Output 9
+
+# -----------------------------------------------------
+# range() over character or alphabet
+# range from 'a' to 'z
+def character_range(char1, char2):
+    for char in range(ord(char1), ord(char2) + 1):
+        yield (char)
+
+
+for letter in character_range('a', 'z'):
+    print(chr(letter), end=', ')
+    
+
+#================================================================
+# Python while loop
+# Why and When to Use while Loop in Python
+number = int(input('Enter any number between 100 and 500 '))
+# number greater than 100 and less than 500
+while number < 100 or number > 500:
+    print('Incorrect number, Please enter correct number:')
+    number = int(input('Enter a Number between 100 and 500 '))
+else:
+    print("Given Number is correct", number)
+    
+
+#--------------------------------------------------------
+# If-else in while loop
+n = int(input('Please Enter Number '))
+while n > 0:
+    # check even and odd
+    if n % 2 == 0:
+        print(n, 'is a even number')
+    else:
+        print(n, 'is a odd number')
+    # decrease number by 1 in each iteration
+    n = n - 1
+
+# ---------------------------------------------------
+# Break Statement
+name = 'Jesaa29Roy'
+size = len(name)
+i = 0
+# iterate loop till the last character
+while i < size:
+    # break loop if current character is number
+    if name[i].isdecimal():
+        break
+    # print current character
+    print(name[i], end=' ')
+    i = i + 1
+
+# --------------------------------------------
+# Continue Statement
+name = 'Jesaa29Roy'
+
+size = len(name)
+i = -1
+# iterate loop till the last character
+while i < size - 1:
+    i = i + 1
+    # skip while loop body if current character is not alphabet
+    if not name[i].isalpha():
+        continue
+    # print current character
+    print(name[i], end=' ')
+    
+    
+# ----------------------------------------------
+# Nested while loops
+i = 1
+# outer while loop
+# 4 rows in pattern
+while i < 5:
+    j = 0
+    # nested while loop
+    while j < i:
+        print('*', end=' ')
+        j = j + 1
+    # end of nested while loop
+    # new line after each row
+    print('')
+    i = i + 1
+
+# --------------------------------------------
+# Reverse while loop
+# reverse while loop
+i = 10
+while i >= 0:
+    print(i, end=' ')
+    i = i - 1
+    
+# --------------------------------------------
+# Iterate String using while loop
+name = "Jessa"
+i = 0
+res = len(name) - 1
+while i <= res:
+    print(name[i])
+    i = i + 1
+    
+    
+# ------------------------------------------
+
+
