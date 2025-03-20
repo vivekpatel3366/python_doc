@@ -99,41 +99,66 @@
 #     elif num == 11:
 #         break
        
-       
-def list():
-    
-    Vlist=[10,30,50,70,40,60,50]
+ 
+ 
+ 
+ 
+ 
+ 
+Vlist=[10,30,50,70,40,60,50]      
+def listshow():
     print("Original list :",Vlist)
 
+def listappend1():
     Vlist.append(12)
     print("After append : ",Vlist)
-
+    
+def listcopy1():
     Vlist1=Vlist.copy()
     print("After copy : ",Vlist1)
 
+def listcount1():
     v=Vlist.count(50)
     print("count the element : ",v)
 
+def listextend1():
     a=['vivek','raj','manish']
     Vlist.extend(a)
     print("After extend : ",Vlist)
 
+def index1():
     index1=Vlist.index(50)
     print("After index : ",index1)
 
+def insert1():
     Vlist.insert(3,90)
     print("After insert : ",Vlist)
 
+def pop1():
     Vlist.pop()
     print("After pop : ",Vlist)
 
+def remove1():
     Vlist.remove(30)
     print("After remove :",Vlist)
 
+def reverse1():
     Vlist.reverse()
     print("After reverse : ",Vlist)
 
+def clear1():
     Vlist.clear()
     print("after clear : ",Vlist)
 
-list()
+
+listshow()
+listappend1()
+listcopy1()
+listcount1()
+listextend1()
+index1()
+insert1()
+pop1()
+remove1()
+reverse1()
+clear1()

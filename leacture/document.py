@@ -225,11 +225,66 @@ print(type(cnum))
 # ================================================
 # if statement = ablock of code that will extcute it's conditio is true
 
-age = int(input("How old are you?"))
+# age = int(input("How old are you?"))
 
-if age >= 18:
-        print("You are an adult:")
-elif age< 0:
-        print("You havaen't been born yet:")
-else:
-        print("You are a child")
+
+# if age >100:
+#         print("YOU are a century old:")
+# elif age >= 18:
+#         print("You are an adult:")
+# elif age< 0:
+#         print("You havaen't been born yet:")
+# else:
+#         print("You are a child")
+
+
+
+# =================================================
+# logica; operators(and,or,not) =used to check if two or more conditional statement
+
+# temp =int(input("What is the tmperature outside?:"))
+# if  not (temp >=0 and temp<=30):
+#        print("the temperature is good today!")
+# elif not (temp< 0 or temp >30):
+#         print("the temeraure is bad today!")
+#         print("stay inside!")
+        
+        
+# ==================================================
+# while loop = a statement that will execute its block of code,
+#              as long as it's conditon remains true
+
+# name=""
+
+# while len(name) == 0:
+#         name = input("Enter your name")
+# print("HELLO "+name)
+
+# name=None
+
+# while not name:
+#         name = input("Enter your name")
+# print("HELLO "+name)
+
+
+# ============================================
+# for loop=a statement that will execute it's block of code 
+#          a limited amount of TimeoutError
+          
+#           while loop = unimited
+#           for loop=limited
+
+# for i in range(10):
+#         print(i+1)
+
+# for i in range(50,100+1,2):
+#         print(i)
+
+# for i in "Vivek k patel":
+#         print(i)
+
+# import time
+# for second in range(10,0,-1):
+#         print(second)
+#         time.sleep(1)
+# print("HAPPY BIRTHDAY")
