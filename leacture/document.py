@@ -365,7 +365,7 @@ print(type(cnum))
 
 # print(food[0][1])
 
---------------------------
+# --------------------------
 # tuple = colletion which  is ordered and unchnageable
 #         used to group together related data
 
@@ -483,3 +483,224 @@ print(type(cnum))
         
 # hello(last='code',middle='Dude',first="BRo")
         
+
+# ==================================================================
+# nested function calls= function calls inside other function callls 
+#       innermost function calls are resolve first returned Value
+#       is used value is used as argument for the next outer function
+
+# num=input("Enter a whole postivie number:")
+# num =float(num)
+# num=abs(num)
+# num=round(num)
+# print(num)
+
+# print(round(abs(float(input("Enter a whole positive number:")))))
+
+
+
+# ======================================================================
+# Scope =The region that a variable is recognized
+#       A varible is only availabe from inside the region it is create
+#       A global and locally scoped version a variable can be created.
+      
+# name = "Bro" #Global scope (availble inside & outside functions)
+
+# def display_name():
+#         name="Code"
+#         print(name)
+        
+# display_name()        
+# print(name)
+
+
+
+# =========================================================================
+# args = paramater that will pack all agrument into a tuple
+#        useful so that a function can accept a varying amount of argument
+   
+       
+# def add(*args): # args /stuff
+#         sum=0
+#         for i in args:
+#                 sum += i
+#         return sum
+
+# print(add(1,2,3,4,5))
+
+
+# ==========================================================================
+# **kwargs = parameter that will pack all arguments into a dictionary
+#           useful so that a function can accept a varying amount of keyword 
+#           argument
+
+# def hello(**kwargs):
+#         print("HEllo"+kwargs['first']+" "+kwargs['last'])
+#         print("HEllo",end=" ")
+        
+#         for key,value in kwargs.items():
+#                 print(value,end="")
+                
+        
+# hello(title="Mr.",first="Bro",middle="Dude",last="Code")
+
+
+
+# =========================================================================
+# str.format = optional method that gives users more control when displaying output
+
+
+# animal ="cow"
+# item ="moon"
+
+
+# print("The {} jumped over the {}".format(animal,item))
+# print("The {1} jumped over the {0}".format(animal,item))
+# print("The {item} jumped over the {animal}".format(animal="cow123",item="moon"))
+
+# text = "The {} jumped over the {}"
+# print(text.format("vivek","PAtel"))
+
+
+# =========================================================
+# str.format()  = optional method that gives users more
+#                control when display output
+# number =1000
+# print("The number pi is {:.3f}".format(number))
+# print("The number is {:,}".format(number))
+# print("The number is {:b}".format(number))
+# print("The number is {:o}".format(number))
+# print("The number is {:X}".format(number))
+# print("The number is {:E}".format(number))
+
+
+
+# ==========================================================
+# import random
+
+# x= random.randint(1,6)
+# y=random.random()
+
+# myList = ['rock','paper','scissors']
+# z = random.choice(myList)
+
+# print(z)
+
+
+# card = [1,2,3,4,5,6,7,8,9,"a","b","c"]
+
+# random.shuffle(card)
+
+# print(card)
+
+
+# =============================================
+# exception= events detected during execution that interupt the flow of a program
+
+# try:
+#    numerator = int(input("Enter a number to divide:"))
+#    demoninator = int(input("Enter a number to divide by:"))
+#    result=numerator/demoninator
+#    print(result)
+# except ZeroDivisionError as e:
+#    print(e)
+#    print("You can't divide by zero! idiot")
+# except ValueError as e:
+#    print(e)
+#    print("Enter only number plz")
+# except Exception as e:
+#     print(e)
+#     print("Something went wrong:(")
+
+
+
+# =========================================================
+# import os
+
+# path="G:\\python\\first python\\python_doc\\python_doc\\new.txt"
+
+# if os.exists(path):
+#         print("That location doesn't!")
+#         if os.path.isfile(path):
+#                 print("That is a file")
+#         elif os.path.isdir(path):
+#                 print("That is a directory!")
+# else:
+#         print("That location doesn't exist")
+
+
+
+# ============================================================
+# open the file
+
+# try:
+#    with open('python_doc\\new.txt') as file:
+#         print(file.read())
+        
+  
+# except FileNotFoundError:
+#    print("That file was not found:")      
+# print(file.closed)
+
+
+# ============================================================
+#already file in add content
+
+# text ="Have a good nice day! see ya:\n"
+
+# with open('python_doc\\new.txt','w') as file:
+#         file.write(text)
+        
+        
+# ==============================================================
+# copyfile()= copies contents of a File
+# copy()= copyfile() + permission mode + destination can be a direcory
+# copy2()= copy() + copies metadata(file's creation and modification times)
+
+# import shutil
+
+# shutil.copyfile('python_doc\\new.txt','python_doc\copy.txt')
+
+
+
+# ============================================================
+# moved the file
+
+
+# import os
+
+# source="python_doc\\copy.txt"
+# destination="python_doc\\leacture\\copy.txt"
+
+# try:
+#    if os.path.exists(destination):
+#            print("There is already a file there")
+#    else:
+#            os.replace(source,destination)
+#            print(source+"Was moved")
+# except FileNotFoundError:
+#         print(source+"was not found")
+
+
+# ===================================================
+# delete the file
+
+import os
+import shutil
+
+path="python_doc\\leacture\\copy.txt"
+
+try:
+     os.remove(path) #delete a file
+     os.rmdir(path)   #delete an ematy directory
+     shutil.rmtree(path)  #delete a directory cantaining files
+except FileNotFoundError:
+        print("That file was not found")
+
+except PermissionError:
+        print("You do not have permission to delete that")
+except OSError:
+        print("You cannot delte that using that function")
+        
+else:
+        print(path+"was deleted")
