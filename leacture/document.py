@@ -288,3 +288,198 @@ print(type(cnum))
 #         print(second)
 #         time.sleep(1)
 # print("HAPPY BIRTHDAY")
+
+
+
+
+# ================================================
+# nested loops =The "inner loop" will finish all of it's iterations before 
+#                finishing one iteration of the "outer loop"
+
+# rows =int(input("How many rows?"))
+# column =int(input("How many column?"))
+# symbol=input("Enter a symbol to use:")
+
+# for i in range(rows):
+#         for j in range(column):
+#                 print(symbol, end=" ")
+                
+#         print()
+
+
+# =====================================================================
+# Loop Control Statement = change a loops execution from its normal sequence
+
+# break = used to terminate the Loop
+# continue =skips to the next iteration of the Loop
+# pass = does nothing acts  as a placeholder
+
+# while True:
+#         name=input("Enter your name:")
+#         if name != "":
+#                 break
+
+# continue
+# phone_number = "123- 456- 789"
+# for i in phone_number:
+#         if  i=="-":
+#                 continue
+#         print(i,end="")
+
+# pass
+# for i in range(1,21):
+#         if i == 13:
+#                 pass
+#         else:
+#                 print(i)
+                
+                
+# ==============================================
+# list =used to store multiple items  in a single variable
+
+# food =["Pizza","humburger","hotdogs","spaghetti"]
+
+# food[0]="shushi"
+
+# print(food)#print list
+
+# print(food[1])#index wise acces element
+
+# food.remove("hotdogs") #remove particluar element
+# food.pop() #remove last element
+# food.insert(1,"cake") #index stor the element
+# food.clear() #clear the list
+# for x in food:
+#         print(x)
+
+
+
+# ===================================================
+# 2d list = alist of list
+
+# drink=["Coffie","soda","tea"]
+# dinner=["pizza","hamburger","hotdog"]
+# dessert=["cake","ice cream"]
+
+# food =[drink,dinner,dessert]
+
+# print(food[0][1])
+
+--------------------------
+# tuple = colletion which  is ordered and unchnageable
+#         used to group together related data
+
+# student=("Bro",21,"male")
+
+# print(student.count("Count"))
+# print(student.index("male"))
+
+# for i in student:
+#         print(i)     
+
+# if 21 in student:     
+#         print("Bro is here!")
+
+# len(), min(), max(), tuple(), index(), count(), sum(), and sorted()
+
+
+# =================================
+# set = collecttion which is unorderd, unindexed. No duplicate values
+
+# utensils ={"fork","spoon","knife"}
+# v2={1,2,3}
+# utensils.add("napkin")
+
+# utensils.remove("fork")
+
+# utensils.clear()
+# print(utensils)
+
+# v2=utensils.union(v2)
+
+# print(v2.difference(utensils))
+
+# utensils.update(v2)
+# for x in utensils:
+#         print(x)
+
+
+# =============================================
+# dictionary = A changable, unorderd collection of unque of qnique key:value
+#    pairs Fast beacuse they use hasing ,allow us to access a valur quikly
+
+# capitals = {
+#         'Usa' :'washington dc',
+#         'india':'new delhi',
+#         'china':'beijing',
+#         'russia':'moscow'
+# }
+
+# capitals.update({'germany':'barline'})
+# capitals.update({'Usa':'las veges'})
+
+# capitals.pop('russia')
+
+# capitals.clear()
+
+# # print(capitals['Usa'])
+# print(capitals.get('Germany'))
+# print(capitals.keys())
+# print(capitals.values())
+# print(capitals.items())
+
+# for key,value in capitals.items():
+#         print(key,value)
+
+
+
+#============================================
+# index operator [] = give access to a sequence's element (str,list,tuple)
+
+# name = "bro Code"
+
+# if(name[0].islower()):
+#         name=name.capitalize()
+        
+# first_name=name[0:3].upper()
+# last_name=name[4:].lower()
+# last_character = name[-1]
+
+# print(last_character )``
+# print(name)
+
+
+# ==============================================
+# funtion = a block of code which is executed only when it is called
+
+# def hello(a,b,c):
+#         print("hello:"+a+b)
+#         print("You are "+str(c)+" year old")
+#         print("HAve a nice day")
+        
+# hello("vivek"," patel",23)
+
+
+ # ====================================================
+# return statement =function send Python value/objects back to the caller.
+#    These values/object are knows as the function's return value
+
+# def multiply(number1,number2):
+#         result =number1+number2
+#         return result
+
+# y=multiply(3,5)
+# print(multiply(10,20),y)
+
+
+# =============================================================
+# keyword argument = argument preceded by an identifier when we pass them to a fuction
+                #    The order of the arguments does'nt matter, unlike position arguments
+                #    python knows the names of the arguments that our function recevies
+                
+        
+# def hello(first,middle,last):
+#         print("hello "+first+" "+middle +" last")
+        
+# hello(last='code',middle='Dude',first="BRo")
+        
